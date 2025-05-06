@@ -19,6 +19,7 @@ cycler==0.12.1
 debugpy==1.8.14
 decorator==5.2.1
 defusedxml==0.7.1
+et_xmlfile==2.0.0
 exceptiongroup==1.2.2
 executing==2.2.0
 fastjsonschema==2.21.1
@@ -51,6 +52,7 @@ jupyterlab==4.4.1
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.27.3
 kiwisolver==1.4.7
+lxml==5.4.0
 MarkupSafe==3.0.2
 matplotlib==3.9.4
 matplotlib-inline==0.1.7
@@ -62,6 +64,7 @@ nbformat==5.10.4
 nest-asyncio==1.6.0
 notebook_shim==0.2.4
 numpy==2.0.2
+openpyxl==3.1.5
 overrides==7.7.0
 packaging==25.0
 pandas==2.2.3
@@ -76,6 +79,7 @@ prompt_toolkit==3.0.51
 psutil==7.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
+pyarrow==20.0.0
 pycparser==2.22
 Pygments==2.19.1
 pyparsing==3.2.3
@@ -102,6 +106,7 @@ threadpoolctl==3.6.0
 tinycss2==1.4.0
 tomli==2.2.1
 tornado==6.4.2
+tqdm==4.67.1
 traitlets==5.14.3
 types-python-dateutil==2.9.0.20241206
 typing_extensions==4.13.2
@@ -112,5 +117,6 @@ wcwidth==0.2.13
 webcolors==24.11.1
 webencodings==0.5.1
 websocket-client==1.8.0
+xlrd==2.0.1
 yfinance==0.2.58
 zipp==3.21.0
