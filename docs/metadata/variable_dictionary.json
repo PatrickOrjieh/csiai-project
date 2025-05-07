@@ -5,7 +5,6 @@
     "unit": "%",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
     "refresh": "quarterly",
-    "field": "returnOnEquity",
     "last_updated": "2025-05-07"
   },
   "debt_to_equity": {
@@ -14,7 +13,6 @@
     "unit": "%",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
     "refresh": "quarterly",
-    "field": "debtToEquity",
     "last_updated": "2025-05-07"
   },
   "current_ratio": {
@@ -23,7 +21,6 @@
     "unit": "ratio",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=financialData",
     "refresh": "quarterly",
-    "field": "currentRatio",
     "last_updated": "2025-05-07"
   },
   "quick_ratio": {
@@ -32,7 +29,6 @@
     "unit": "ratio",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=financialData",
     "refresh": "quarterly",
-    "field": "quickRatio",
     "last_updated": "2025-05-07"
   },
   "oper_cash_flow": {
@@ -41,25 +37,6 @@
     "unit": "USD",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=cashflowStatementHistoryQuarterly",
     "refresh": "quarterly",
-    "field": "operatingCashflow",
-    "last_updated": "2025-05-07"
-  },
-  "total_revenue": {
-    "dim": "financial_strength",
-    "definition": "Total revenue reported by the company.",
-    "unit": "USD",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=incomeStatementHistoryQuarterly",
-    "refresh": "quarterly",
-    "field": "totalRevenue",
-    "last_updated": "2025-05-07"
-  },
-  "ebitda_margin": {
-    "dim": "financial_strength",
-    "definition": "EBITDA divided by total revenue.",
-    "unit": "%",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=financialData",
-    "refresh": "quarterly",
-    "field": "ebitdaMargins",
     "last_updated": "2025-05-07"
   },
   "revenue_growth": {
@@ -68,7 +45,14 @@
     "unit": "%",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=incomeStatementHistoryQuarterly",
     "refresh": "quarterly",
-    "field": "derived",
+    "last_updated": "2025-05-07"
+  },
+  "earnings_growth": {
+    "dim": "growth_potential",
+    "definition": "Year-over-year percentage change in EPS.",
+    "unit": "%",
+    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=earningsTrend",
+    "refresh": "quarterly",
     "last_updated": "2025-05-07"
   },
   "operating_margin": {
@@ -77,7 +61,6 @@
     "unit": "%",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=financialData",
     "refresh": "quarterly",
-    "field": "operatingMargins",
     "last_updated": "2025-05-07"
   },
   "gross_margin": {
@@ -86,34 +69,22 @@
     "unit": "%",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=financialData",
     "refresh": "quarterly",
-    "field": "grossMargins",
-    "last_updated": "2025-05-07"
-  },
-  "rnd_to_revenue": {
-    "dim": "growth_potential",
-    "definition": "R&D expenditure divided by total revenue.",
-    "unit": "%",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=incomeStatementHistoryQuarterly",
-    "refresh": "quarterly",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "analyst_rating": {
     "dim": "growth_potential",
-    "definition": "Wall-Street consensus rating (1 = Strong Bu, 5 = Sell).",
+    "definition": "Wall-Street consensus rating (1 = Strong Buy, 5 = Sell).",
     "unit": "score",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=recommendationTrend",
     "refresh": "weekly",
-    "field": "recommendationMean",
     "last_updated": "2025-05-07"
   },
-  "pb_ratio": {
+  "pe_ratio": {
     "dim": "market_performance",
-    "definition": "Share price divided by book value per share.",
+    "definition": "Share price divided by trailing twelve-month EPS.",
     "unit": "ratio",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
+    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=summaryDetail",
     "refresh": "daily",
-    "field": "priceToBook",
     "last_updated": "2025-05-07"
   },
   "eps": {
@@ -122,7 +93,22 @@
     "unit": "USD",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
     "refresh": "quarterly",
-    "field": "trailingEps",
+    "last_updated": "2025-05-07"
+  },
+  "pb_ratio": {
+    "dim": "market_performance",
+    "definition": "Share price divided by book value per share.",
+    "unit": "ratio",
+    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
+    "refresh": "daily",
+    "last_updated": "2025-05-07"
+  },
+  "dividend_yield": {
+    "dim": "market_performance",
+    "definition": "Annual dividend per share divided by share price.",
+    "unit": "%",
+    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=summaryDetail",
+    "refresh": "daily",
     "last_updated": "2025-05-07"
   },
   "market_cap": {
@@ -131,142 +117,86 @@
     "unit": "USD",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=price",
     "refresh": "daily",
-    "field": "marketCap",
-    "last_updated": "2025-05-07"
-  },
-  "ev_to_ebitda": {
-    "dim": "market_performance",
-    "definition": "Enterprise Value divided by EBITDA.",
-    "unit": "ratio",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
-    "refresh": "quarterly",
-    "field": "enterpriseToEbitda",
-    "last_updated": "2025-05-07"
-  },
-  "price_to_sales": {
-    "dim": "market_performance",
-    "definition": "Market cap divided by trailing 12-month sales.",
-    "unit": "ratio",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=summaryDetail",
-    "refresh": "quarterly",
-    "field": "priceToSalesTrailing12Months",
-    "last_updated": "2025-05-07"
-  },
-  "payout_ratio": {
-    "dim": "market_performance",
-    "definition": "Proportion of earnings paid as dividends.",
-    "unit": "%",
-    "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=summaryDetail",
-    "refresh": "quarterly",
-    "field": "payoutRatio",
     "last_updated": "2025-05-07"
   },
   "hist_volatility": {
     "dim": "risk_volatility",
-    "definition": "30-day annualised volatility.",
+    "definition": "30-day annualised standard deviation of returns.",
     "unit": "%",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "beta": {
     "dim": "risk_volatility",
-    "definition": "Covariance with S&P 500 divided by variance of S&P 500.",
+    "definition": "Covariance with S&P 500 returns divided by variance of S&P 500.",
     "unit": "ratio",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
     "refresh": "daily",
-    "field": "beta",
     "last_updated": "2025-05-07"
   },
   "sharpe_ratio": {
     "dim": "risk_volatility",
-    "definition": "Excess return per unit of volatility.",
+    "definition": "Excess return divided by volatility.",
     "unit": "ratio",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "max_drawdown": {
     "dim": "risk_volatility",
-    "definition": "Largest peak-to-trough decline over past year.",
+    "definition": "Largest peak-to-trough drop over last 12 months.",
     "unit": "%",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "stddev_returns": {
     "dim": "risk_volatility",
-    "definition": "Standard deviation of daily returns over 252 days.",
+    "definition": "Standard deviation of daily returns (252-day window).",
     "unit": "%",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
-    "last_updated": "2025-05-07"
-  },
-  "value_at_risk": {
-    "dim": "risk_volatility",
-    "definition": "95% Value at Risk over 1-day horizon.",
-    "unit": "%",
-    "source_url": "price_history",
-    "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "avg_volume_30d": {
     "dim": "liquidity_trading",
-    "definition": "30-day average daily trading volume.",
+    "definition": "30-day moving average of daily volume.",
     "unit": "shares",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "bid_ask_spread": {
     "dim": "liquidity_trading",
-    "definition": "Relative bid-ask spread proxy.",
+    "definition": "Proxy spread: (High \u2212 Low) \u00f7 Mid price.",
     "unit": "%",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "volume_growth": {
     "dim": "liquidity_trading",
-    "definition": "Monthly change in trading volume.",
+    "definition": "Month-over-month percentage change in volume.",
     "unit": "%",
     "source_url": "price_history",
     "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   },
   "shares_outstanding": {
     "dim": "liquidity_trading",
-    "definition": "Total company shares issued.",
+    "definition": "Total shares issued by the company.",
     "unit": "shares",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
     "refresh": "quarterly",
-    "field": "sharesOutstanding",
     "last_updated": "2025-05-07"
   },
   "float_shares": {
     "dim": "liquidity_trading",
-    "definition": "Publicly tradable shares (excluding insiders).",
+    "definition": "Shares available for public trading (ex-insiders).",
     "unit": "shares",
     "source_url": "https://query2.finance.yahoo.com/v10/finance/quoteSummary/<ticker>?modules=defaultKeyStatistics",
     "refresh": "quarterly",
-    "field": "floatShares",
-    "last_updated": "2025-05-07"
-  },
-  "turnover_ratio": {
-    "dim": "liquidity_trading",
-    "definition": "30-day average volume divided by float.",
-    "unit": "%",
-    "source_url": "price_history",
-    "refresh": "daily",
-    "field": "derived",
     "last_updated": "2025-05-07"
   }
 }
