@@ -22,6 +22,7 @@ defusedxml==0.7.1
 et_xmlfile==2.0.0
 exceptiongroup==1.2.2
 executing==2.2.0
+factor_analyzer==0.5.1
 fastjsonschema==2.21.1
 fonttools==4.57.0
 fqdn==1.5.1
