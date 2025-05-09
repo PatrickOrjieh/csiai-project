@@ -3,6 +3,9 @@
 
 Data-driven stock attractiveness ranking system built using 21 normalized indicators across five financial dimensions to deliver a transparent composite index for U.S. equities.
 
+![image](https://github.com/user-attachments/assets/92c57d51-63f2-440c-9f67-e9ceac3277d1)
+
+
 ## Project Overview
 
 **CSIAI** ranks listed U.S. stocks by computing a composite score based on:
